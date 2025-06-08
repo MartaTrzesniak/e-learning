@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title || 'Langsy' %></title>
+
+  <!-- Ikonka -->
+  <link rel="icon" href="/images/favicon.ico" />
+
+  <!-- Globalne style -->
+  <link rel="stylesheet" href="/css/partials/html.css" />
+  <link rel="stylesheet" href="/css/partials/header.css" />
+  <link rel="stylesheet" href="/css/partials/footer.css" />
+
+  <!-- Dynamiczne style -->
+  <% if (typeof styles !== 'undefined' && styles.length) { %>
+    <% styles.forEach(function(style) { %>
+      <link rel="stylesheet" href="/css/<%= style %>.css" />
+    <% }) %>
+  <% } %>
+
+  <!-- Ikony (np. Font Awesome) -->
+  <script src="https://kit.fontawesome.com/8304ccfbd0.js" crossorigin="anonymous" defer></script>
+
+  <!-- Globalne skrypty -->
+  <script src="/js/partials/header.js" defer></script>
+  <script src="/js/partials/footer.js" defer></script>
+
+  <!-- Dynamiczne skrypty -->
+  <% if (typeof scripts !== 'undefined' && scripts.length) { %>
+    <% scripts.forEach(function(script) { %>
+      <script src="/js/<%= script %>.js" defer></script>
+    <% }) %>
+  <% } %>
+</head>

@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.main-header {
+  width: 100%;
+}
+
+/* Górna część nagłówka */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #053108;
+}
+
+/* Pasek wyszukiwania */
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 40px;
+  background-color: white;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 2px solid #053108;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 9999px 0 0 9999px;
+}
+
+.search-bar button {
+  background-color: #053108;
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 9999px 9999px 0;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #bf8915;
+}
+
+.search-bar button svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+/* Ikony po prawej */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-button svg {
+  fill: #053108;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  fill: #053108;
+  cursor: pointer;
+}
+
+.icon-button:hover svg,
+.user-icon:hover {
+  fill: #bf8915;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* Dolna część nagłówka */
+.header-bottom {
+  background-color: #053108;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.header-bottom a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header-bottom a:hover {
+  color: #bf8915;
+}
+
+.logo img {
+  max-height: 50px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}

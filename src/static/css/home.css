@@ -1,0 +1,90 @@
+/* Reset i ustawienia podstawowe */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+/* Kontener strony */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Baner pełnej szerokości */
+.hero-banner {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Pasek z komunikatami */
+.info-bar {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 1em 0;
+  box-sizing: border-box;
+}
+
+.info-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.info-left,
+.info-right {
+  color: #053108;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.highlight-number {
+  color: #bf8915;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.highlight-number-centered {
+  display: inline-block;  /* blok liniowy, można ustawić szerokość */
+  width: 100%;            /* zajmuje całą szerokość rodzica */
+  text-align: center;     /* wyśrodkowanie zawartości */
+}
+
+
+/* Główna treść */
+.content-wrap {
+  flex: 1 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+/* Stopka */
+footer {
+  flex-shrink: 0;
+}
