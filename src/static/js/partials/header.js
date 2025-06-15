@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   searchBtn.addEventListener('click', () => {
     const query = searchInput.value.trim();
     if (query) {
-      // Przykładowo przekierowanie do strony wyszukiwania z parametrem
       window.location.href = `/search?query=${encodeURIComponent(query)}`;
     }
   });

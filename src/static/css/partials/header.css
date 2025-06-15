@@ -12,7 +12,6 @@ body {
   width: 100%;
 }
 
-/* Górna część nagłówka */
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -22,14 +21,12 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-/* Logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
   color: #053108;
 }
 
-/* Pasek wyszukiwania */
 .search-bar {
   display: flex;
   flex: 1;
@@ -72,7 +69,6 @@ body {
   fill: white;
 }
 
-/* Ikony po prawej */
 .header-icons {
   display: flex;
   align-items: center;
@@ -97,8 +93,6 @@ body {
   cursor: pointer;
 }
 
-
-/* Dolna część nagłówka */
 .header-bottom {
   background-color: #053108;
   padding: 12px 0;

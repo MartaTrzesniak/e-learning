@@ -2,63 +2,25 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Middleware do parsowania danych z formularzy (application/x-www-form-urlencoded)
 app.use(express.urlencoded({ extended: true }));
 
-// Konfiguracja silnika widoków EJS
-app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('view engine', 'ejs');
 
-// Udostępnianie statycznych plików (css, js, img)
-app.use(express.static(path.join(__dirname, 'src', 'static')));
+app.use(express.static(path.join(__dirname, 'src/static')));
 
-// Trasa strony głównej – renderuje src/views/home.ejs
+const loginRoutes = require('./src/routes/loginRoutes');
+app.use('/user', loginRoutes);
+
 app.get('/', (req, res) => {
-  res.render('home', {
-    title: 'Strona główna',
-    Langsy: 'Strona główna',
-    styles: ['home'],
-    scripts: ['home']
-  });
+  res.render('home', { title: 'Langsy' }); 
 });
 
-// Trasa strony logowania – renderuje src/views/user/login.ejs
-app.get('/user/login', (req, res) => {
-  res.render('user/login');
+app.use((req, res) => {
+  res.status(404).render('404', { title: 'Strona nie znaleziona' });
 });
 
-// Trasa strony rejestracji – renderuje src/views/user/register.ejs
-app.get('/user/register', (req, res) => {
-  res.render('user/register', {
-    title: 'Rejestracja – Langsy',
-    styles: ['user/register'],
-    scripts: ['user/validate_register']
-  });
-});
-
-// Obsługa przesłania formularza rejestracji (POST)
-app.post('/user/register', (req, res) => {
-  const { email, login, password, confirmPassword } = req.body;
-
-  // Walidacja prostego sprawdzenia zgodności haseł
-  if (password !== confirmPassword) {
-    return res.render('user/register', {
-      error: 'Podane hasła nie są takie same',
-      title: 'Rejestracja – Langsy',
-      styles: ['user/register'],
-      scripts: ['user/validate_register'],
-      email,
-      login
-    });
-  }
-
-  // Tutaj dodaj logikę zapisu użytkownika do bazy danych
-
-  // Na koniec przekieruj do strony logowania (lub innej)
-  res.redirect('/user/login');
-});
-
-// Uruchomienie serwera
-app.listen(3000, () => {
-  console.log('Serwer działa na http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Serwer działa na http://localhost:${PORT}`);
 });

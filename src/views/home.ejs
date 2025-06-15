@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <%- include('partials/head') %>
+  <%- include('partials/head', {
+    title: 'Langsy',
+    styles: ['home'],     
+    scripts: []            
+  }) %>
   <body>
     <div class="page-container">
       <%- include('partials/header') %>
 
-      <!-- Baner pełnej szerokości -->
       <header class="hero-banner">
         <img src="/images/banner.png" alt="Baner główny strony" />
       </header>
 
-      <!-- Pasek z komunikatami -->
       <div class="info-bar">
         <div class="info-inner">
           <div class="info-left">
@@ -19,10 +21,10 @@
             <div class="centered number">
                 <span class="highlight-number">3784 </span>osób
             </div>
-        </div>
+          </div>
           <div class="info-right">
             Sprawdź swój poziom<br>
-             i dołącz do nas już dziś!
+            i dołącz do nas już dziś!
           </div>
         </div>
       </div>

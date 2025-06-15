@@ -22,12 +22,12 @@
 .login-div {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px; /* mniejszy odstęp między polami */
+    margin-bottom: 10px; 
 }
 
 .login-form label {
-    margin-top: 6px;     /* mniejszy odstęp nad etykietą */
-    margin-bottom: 4px;  /* mniejszy odstęp pod etykietą */
+    margin-top: 6px;     
+    margin-bottom: 4px; 
     font-weight: 600;
     color: #333;
 }
@@ -38,7 +38,7 @@
     border-radius: 6px;
     transition: border-color 0.3s ease;
     font-size: 0.95rem;
-    background-color: #e5edf7; /* Jasne błękitne tło */
+    background-color: #e5edf7; 
 }
 
 .login-form input:focus {
