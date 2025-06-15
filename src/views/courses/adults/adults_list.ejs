@@ -1,0 +1,39 @@
+<%- include('../../partials/head', {
+  title: 'Kursy dla dorosłych – Langsy',
+  styles: ['courses/adults/adults_list'],
+  scripts: []
+}) %>
+
+<body>
+  <%- include('../../partials/header') %>
+
+  <main class="course-adults-container">
+    <section class="course-header">
+      <h1>Kursy językowe dla dorosłych</h1>
+      <p>Znajdź idealny kurs dopasowany do Twojego poziomu i celów.</p>
+    </section>
+
+    <section class="courses-list">
+      <article class="course-card">
+        <h2>Angielski od podstaw</h2>
+        <p>Dla osób rozpoczynających naukę. Lekcje w przystępnej formie.</p>
+        <a href="/courses/adults/english_beginner" class="button">Zobacz kurs</a>
+      </article>
+
+      <article class="course-card">
+        <h2>Angielski średniozaawansowany</h2>
+        <p>Dla osób, które opanowały podstawy i chcą rozwijać swoje umiejętności.</p>
+        <a href="/courses/adults/english_intermediate" class="button">Zobacz kurs</a>
+      </article>
+
+
+      <article class="course-card">
+        <h2>Business English</h2>
+        <p>Język angielski w pracy, na spotkaniach i w e-mailach.</p>
+        <a href="/courses/adults/english_bussiness" class="button">Zobacz kurs</a>
+      </article>
+    </section>
+  </main>
+
+  <%- include('../../partials/footer') %>
+</body>

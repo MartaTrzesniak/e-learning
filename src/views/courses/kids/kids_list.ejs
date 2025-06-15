@@ -1,0 +1,38 @@
+<%- include('../../partials/head', {
+  title: 'Kursy dla dzieci – Langsy',
+  styles: ['courses/kids/kids_list'],
+  scripts: []
+}) %>
+
+<body>
+  <%- include('../../partials/header') %>
+
+  <main class="course-kids-container">
+    <section class="course-header">
+      <h1>Kursy językowe dla dzieci</h1>
+      <p>Rozwijaj językowe zdolności swojego dziecka w przyjaznej i zabawnej atmosferze.</p>
+    </section>
+
+    <section class="courses-list">
+      <article class="course-card">
+        <h2>Angielski dla dzieci 4–6 lat</h2>
+        <p>Nauka przez zabawę! Kolorowe materiały, piosenki i gry językowe rozwijające słuch i wymowę.</p>
+        <a href="/courses/kids/english_4-6" class="button">Zobacz kurs</a>
+      </article>
+
+      <article class="course-card">
+        <h2>Angielski dla dzieci 7–10 lat</h2>
+        <p>Interaktywne lekcje i ciekawe historie pomagają dzieciom w naturalnym przyswajaniu języka.</p>
+        <a href="/courses/kids/english_7-10" class="button">Zobacz kurs</a>
+      </article>
+
+      <article class="course-card">
+        <h2>Angielski dla dzieci 11–13 lat</h2>
+        <p>Praktyczne zwroty, dialogi i przygotowanie do dalszej nauki w szkole i poza nią.</p>
+        <a href="/courses/kids/english_11-13" class="button">Zobacz kurs</a>
+      </article>
+    </section>
+  </main>
+
+  <%- include('../../partials/footer') %>
+</body>

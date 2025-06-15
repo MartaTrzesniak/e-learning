@@ -1,0 +1,77 @@
+<%- include('../partials/head', {
+  title: title,
+  styles: ['courses/sign_up'],  
+  scripts: ['courses/sign_up']  
+}) %>
+
+<body>
+  <%- include('../partials/header') %>
+
+  <main class="enrollment-container">
+    <section class="enrollment-form-section">
+      <h1>Zapisz się na kurs</h1>
+
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" id="adultCheckbox" onchange="toggleSection('adult')"> Kurs dla dorosłych
+        </label>
+        <label>
+          <input type="checkbox" id="childCheckbox" onchange="toggleSection('child')"> Kurs dla dzieci
+        </label>
+      </div>
+
+      <div id="adultSection" class="hidden">
+        <label for="adultCourse">Wybierz kurs dla dorosłych:</label>
+        <select id="adultCourse" onchange="showForm('adult')">
+          <option value="">-- Wybierz --</option>
+          <option value="beginner">Angielski od podstaw</option>
+          <option value="intermediate">Angielski średniozaawansowany</option>
+          <option value="business">Business English</option>
+        </select>
+
+        <form id="adultForm" class="hidden">
+          <label>Imię*</label>
+          <input type="text" required />
+          <label>Nazwisko*</label>
+          <input type="text" required />
+          <label>Numer telefonu*</label>
+          <input type="tel" required />
+          <label>Adres e-mail*</label>
+          <input type="email" required />
+          <button type="submit">Zapisz się na kurs!</button>
+        </form>
+      </div>
+
+      <div id="childSection" class="hidden">
+        <label for="childCourse">Wybierz kurs dla dzieci:</label>
+        <select id="childCourse" onchange="showForm('child')">
+          <option value="">-- Wybierz --</option>
+          <option value="4-6">Angielski dla dzieci 4–6 lat</option>
+          <option value="7-10">Angielski dla dzieci 7–10 lat</option>
+          <option value="11-13">Angielski dla dzieci 11–13 lat</option>
+        </select>
+
+        <form id="childForm" class="hidden">
+          <label>Imię dziecka*</label>
+          <input type="text" required />
+          <label>Nazwisko dziecka*</label>
+          <input type="text" required />
+          <label>Wiek dziecka*</label>
+          <input type="number" min="4" max="13" required />
+          <label>Imię rodzica*</label>
+          <input type="text" required />
+          <label>Nazwisko rodzica*</label>
+          <input type="text" required />
+          <label>Numer kontaktowy do rodzica*</label>
+          <input type="tel" required />
+          <label>Adres e-mail do rodzica*</label>
+          <input type="email" required />
+          <button type="submit">Zapisz na kurs!</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+
+</body>

@@ -12,6 +12,9 @@ app.use(express.static(path.join(__dirname, 'src/static')));
 const loginRoutes = require('./src/routes/loginRoutes');
 app.use('/user', loginRoutes);
 
+const coursesRoutes = require('./src/routes/coursesRoutes');
+app.use('/courses', coursesRoutes);
+
 app.get('/', (req, res) => {
   res.render('home', { title: 'Langsy' }); 
 });
