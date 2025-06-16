@@ -10,4 +10,12 @@ router.get('/login', (req, res) => {
   });
 });
 
+router.get('/register', (req, res) => {
+  res.render('user/register', {
+    title: 'Rejestracja – Langsy',
+    styles: ['user/register'],
+    scripts: []
+  });
+});
+
 module.exports = router;

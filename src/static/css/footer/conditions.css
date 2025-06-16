@@ -1,0 +1,19 @@
+.conditions-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: #053108;
+}
+
+.conditions-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.conditions-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}

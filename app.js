@@ -15,6 +15,9 @@ app.use('/user', loginRoutes);
 const coursesRoutes = require('./src/routes/coursesRoutes');
 app.use('/courses', coursesRoutes);
 
+const footerRoutes = require('./src/routes/footerRoutes');
+app.use('/footer', footerRoutes);
+
 app.get('/', (req, res) => {
   res.render('home', { title: 'Langsy' }); 
 });

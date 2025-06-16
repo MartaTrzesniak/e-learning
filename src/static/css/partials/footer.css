@@ -1,3 +1,4 @@
+/* Stopka i ogólne ustawienia */
 footer {
   display: flex;
   flex-direction: column;
@@ -21,12 +22,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0.7em;
-}
-
-.footer-top .footer-social {
-  margin-left: auto;
-  align-items: flex-end;
-  text-align: right;
 }
 
 .footer-top h2 {
@@ -103,11 +98,34 @@ footer {
 .footer-bottom {
   text-align: center;
   padding: 1em 0;
-  background-color: #042606;
+  background-color: #053108;
   color: rgba(255, 255, 255, 0.5);
   font-style: italic;
   letter-spacing: 0.05em;
   font-size: 0.85em;
+}
+
+.footer-social-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 2em;
+  margin-left: auto;
+  align-items: flex-start;
+  min-width: 320px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.footer-social h2 {
+  margin-bottom: 0.5em;
 }
 
 .social-icons {
@@ -158,11 +176,23 @@ footer {
     gap: 1em;
   }
 
-  .social-icons {
+  .footer-social-wrapper {
+    margin-left: 0;
     align-items: center;
+    min-width: auto;
+  }
+
+  .footer-social {
+    align-items: flex-end !important;
+    text-align: right;
+    width: 150px;
+  }
+
+  .social-icons {
+    align-items: flex-end;
   }
 
   .social-icons li a {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
