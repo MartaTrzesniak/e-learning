@@ -17,7 +17,6 @@ router.get('/adults/english_beginner', (req, res) => {
   });
 });
 
-// Angielski średniozaawansowany
 router.get('/adults/english_intermediate', (req, res) => {
   res.render('courses/adults/english_intermediate', {
     title: 'Angielski średniozaawansowany – Langsy',
@@ -26,7 +25,6 @@ router.get('/adults/english_intermediate', (req, res) => {
   });
 });
 
-// Business English
 router.get('/adults/english_bussiness', (req, res) => {
   res.render('courses/adults/english_bussiness', {
     title: 'Business English – Langsy',
